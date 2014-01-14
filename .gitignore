@@ -31,3 +31,13 @@ Solutions/Common.Lib/Release
 *.csproj.user
 *.idc
 Engine/version.aps
+
+OSX/xcode/legacy/game_files/ac2game.001
+
+OSX/xcode/legacy/game_files/ac2game.002
+
+OSX/xcode/legacy/game_files/ac2game.dat
+
+OSX/xcode/legacy/game_files/audio.vox
+
+OSX/xcode/legacy/game_files/speech.vox

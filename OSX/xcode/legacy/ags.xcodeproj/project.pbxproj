@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110F58A51885B8450061BB0A /* ac2game.001 in Resources */ = {isa = PBXBuildFile; fileRef = 110F58A01885B8450061BB0A /* ac2game.001 */; };
+		110F58A61885B8450061BB0A /* ac2game.002 in Resources */ = {isa = PBXBuildFile; fileRef = 110F58A11885B8450061BB0A /* ac2game.002 */; };
+		110F58A71885B8450061BB0A /* ac2game.dat in Resources */ = {isa = PBXBuildFile; fileRef = 110F58A21885B8450061BB0A /* ac2game.dat */; };
+		110F58A81885B8450061BB0A /* audio.vox in Resources */ = {isa = PBXBuildFile; fileRef = 110F58A31885B8450061BB0A /* audio.vox */; };
+		110F58A91885B8450061BB0A /* speech.vox in Resources */ = {isa = PBXBuildFile; fileRef = 110F58A41885B8450061BB0A /* speech.vox */; };
 		28FD15000DC6FC520079059D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGL.framework */; };
 		6007696216E9F56E00DCE88E /* test_version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6007696116E9F56E00DCE88E /* test_version.cpp */; };
 		6007696416E9F57A00DCE88E /* test_sprintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6007696316E9F57A00DCE88E /* test_sprintf.cpp */; };
@@ -343,6 +348,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		110F58A01885B8450061BB0A /* ac2game.001 */ = {isa = PBXFileReference; lastKnownFileType = file; name = ac2game.001; path = game_files/ac2game.001; sourceTree = "<group>"; };
+		110F58A11885B8450061BB0A /* ac2game.002 */ = {isa = PBXFileReference; lastKnownFileType = file; name = ac2game.002; path = game_files/ac2game.002; sourceTree = "<group>"; };
+		110F58A21885B8450061BB0A /* ac2game.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = ac2game.dat; path = game_files/ac2game.dat; sourceTree = "<group>"; };
+		110F58A31885B8450061BB0A /* audio.vox */ = {isa = PBXFileReference; lastKnownFileType = file; name = audio.vox; path = game_files/audio.vox; sourceTree = "<group>"; };
+		110F58A41885B8450061BB0A /* speech.vox */ = {isa = PBXFileReference; lastKnownFileType = file; name = speech.vox; path = game_files/speech.vox; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* ags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ags.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28FD14FF0DC6FC520079059D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* ags_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ags_Prefix.pch; sourceTree = "<group>"; };
@@ -1098,6 +1108,11 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				110F58A01885B8450061BB0A /* ac2game.001 */,
+				110F58A11885B8450061BB0A /* ac2game.002 */,
+				110F58A21885B8450061BB0A /* ac2game.dat */,
+				110F58A31885B8450061BB0A /* audio.vox */,
+				110F58A41885B8450061BB0A /* speech.vox */,
 				8D1107310486CEB800E47090 /* ags-Info.plist */,
 			);
 			name = Resources;
@@ -2283,6 +2298,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				110F58A51885B8450061BB0A /* ac2game.001 in Resources */,
+				110F58A71885B8450061BB0A /* ac2game.dat in Resources */,
+				110F58A81885B8450061BB0A /* audio.vox in Resources */,
+				110F58A61885B8450061BB0A /* ac2game.002 in Resources */,
+				110F58A91885B8450061BB0A /* speech.vox in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2631,7 +2651,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = i386;
-				FRAMEWORK_SEARCH_PATHS = "${SOURCE_ROOT}/../lib";
+				FRAMEWORK_SEARCH_PATHS = "${SOURCE_ROOT}/../../lib";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DISABLE_MPEG_AUDIO,
@@ -2644,19 +2664,20 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"${SOURCE_ROOT}/../include",
-					"${SOURCE_ROOT}/../../Plugins",
-					"${SOURCE_ROOT}/../../Common",
-					"${SOURCE_ROOT}/../../Common/libinclude",
-					"${SOURCE_ROOT}/../../Engine",
-					"${SOURCE_ROOT}/../lib/FreeType.framework/Headers",
+					"${SOURCE_ROOT}/../../include",
+					"${SOURCE_ROOT}/../../../Plugins",
+					"${SOURCE_ROOT}/../../../Common",
+					"${SOURCE_ROOT}/../../../Common/libinclude",
+					"${SOURCE_ROOT}/../../../Engine",
+					"${SOURCE_ROOT}/../../lib/FreeType.framework/Headers",
 				);
-				LIBRARY_SEARCH_PATHS = "${SOURCE_ROOT}/../lib";
+				LIBRARY_SEARCH_PATHS = "${SOURCE_ROOT}/../../lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-fpermissive",
 					"$(OTHER_CFLAGS)",
 				);
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				USER_HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/../include ${SOURCE_ROOT}/../../Plugins ${SOURCE_ROOT}/../../Common ${SOURCE_ROOT}/../../Common/libinclude ${SOURCE_ROOT}/../../Engine";
 			};
 			name = Debug;
@@ -2665,7 +2686,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = i386;
-				FRAMEWORK_SEARCH_PATHS = "${SOURCE_ROOT}/../lib";
+				FRAMEWORK_SEARCH_PATHS = "${SOURCE_ROOT}/../../lib";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					DISABLE_MPEG_AUDIO,
@@ -2676,20 +2697,21 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
-					"${SOURCE_ROOT}/../include",
-					"${SOURCE_ROOT}/../../Plugins",
-					"${SOURCE_ROOT}/../../Common",
-					"${SOURCE_ROOT}/../../Common/libinclude",
-					"${SOURCE_ROOT}/../../Engine",
-					"${SOURCE_ROOT}/../lib/FreeType.framework/Headers",
+					"${SOURCE_ROOT}/../../include",
+					"${SOURCE_ROOT}/../../../Plugins",
+					"${SOURCE_ROOT}/../../../Common",
+					"${SOURCE_ROOT}/../../../Common/libinclude",
+					"${SOURCE_ROOT}/../../../Engine",
+					"${SOURCE_ROOT}/../../lib/FreeType.framework/Headers",
 				);
-				LIBRARY_SEARCH_PATHS = "${SOURCE_ROOT}/../lib";
+				LIBRARY_SEARCH_PATHS = "${SOURCE_ROOT}/../../lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-fpermissive",
 					"$(OTHER_CFLAGS)",
 				);
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO;
 				USER_HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/../include ${SOURCE_ROOT}/../../Plugins ${SOURCE_ROOT}/../../Common ${SOURCE_ROOT}/../../Common/libinclude ${SOURCE_ROOT}/../../Engine";
 			};
 			name = Release;
