@@ -64,7 +64,7 @@ extern SpriteCache spriteset;
 extern DynamicArray<GUIButton> guibuts;
 
 int display_message_aschar=0;
-char *heightTestString = "ZHwypgfjqhkilIK";
+const char *heightTestString = "ZHwypgfjqhkilIK";
 
 
 TopBarSettings topBar;

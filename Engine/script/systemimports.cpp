@@ -99,7 +99,7 @@ const ScriptImport *SystemImports::getByIndex(int index)
 
 int SystemImports::get_index_of(const char *namw)
 {
-    int bestMatch = -1;
+    //int bestMatch = -1;
     char altName[200];
     sprintf(altName, "%s$", namw);
 

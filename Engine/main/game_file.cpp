@@ -651,7 +651,7 @@ int load_game_file() {
     game.charProps = (CustomProperties*)calloc(game.numcharacters, sizeof(CustomProperties));
 
     allocate_memory_for_views(game.numviews);
-    int iteratorCount = 0;
+    //int iteratorCount = 0;
 
 	game_file_read_views(in);
 

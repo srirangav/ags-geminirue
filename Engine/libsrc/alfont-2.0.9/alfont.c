@@ -9,6 +9,10 @@
 
 /* See FTL.txt (FreeType License) for license */
 
+// include <wchar.h> to satisfy Xcode - Sriranga Veeraraghavan 10/12/2015
+
+#include <wchar.h>
+
 // todo (char map null check)
 
 #include <allegro.h>
@@ -28,6 +32,10 @@
 
 #include FT_FREETYPE_H
 #include FT_GLYPH_H
+
+// add extern declaration to satisfy Xcode - Sriranga Veeraraghavan 10/12/2015
+
+extern size_t malloc_usable_size(const void* allocation);
 
 #define _msize malloc_usable_size
 
@@ -614,7 +622,7 @@ ALFONT_FONT *alfont_load_font_from_mem(const char *data, int data_len) {
   memcpy((void *)font->data, (void *)data, data_len);
 
   /* load the font */
-  error = FT_New_Memory_Face(ft_library, font->data, font->data_size, 0, &font->face);
+  error = FT_New_Memory_Face(ft_library, (const FT_Byte *)font->data, font->data_size, 0, &font->face);
 
   if (error) {
     free(font->data);
@@ -3381,7 +3389,7 @@ int alfont_text_count(ALFONT_FONT *f, const char *str) {
 
 int alfont_ugetc(ALFONT_FONT *f, const char *s) {
   char *lpszW;
-  char *lpszW_pointer=NULL; //used for freeing string
+  //char *lpszW_pointer=NULL; //used for freeing string
   char *s_pointer=NULL; //used for original string fixed by autofix
   char *s_pointer_temp=NULL; //temporary used for autofix string
   char *precedingchar_pointer=NULL; //used for precedingchar character
@@ -3625,7 +3633,7 @@ int alfont_ugetc(ALFONT_FONT *f, const char *s) {
 
 int alfont_ugetx(ALFONT_FONT *f, char **s) {
   char *lpszW;
-  char *lpszW_pointer=NULL; //used for freeing string
+  //char *lpszW_pointer=NULL; //used for freeing string
   char *s_pointer=NULL; //used for original string fixed by autofix
   char *s_pointer_temp=NULL; //temporary used for autofix string
   char *precedingchar_pointer=NULL; //used for precedingchar character
@@ -3941,7 +3949,7 @@ int alfont_ugetx(ALFONT_FONT *f, char **s) {
 
 int alfont_ugetxc(ALFONT_FONT *f, const char **s) {
   char *lpszW;
-  char *lpszW_pointer=NULL; //used for freeing string
+  //char *lpszW_pointer=NULL; //used for freeing string
   char *s_pointer=NULL; //used for original string fixed by autofix
   char *s_pointer_temp=NULL; //temporary used for autofix string
   char *precedingchar_pointer=NULL; //used for precedingchar character
@@ -4257,7 +4265,7 @@ int alfont_ugetxc(ALFONT_FONT *f, const char **s) {
 
 void alfont_get_string(ALFONT_FONT *f, const char *s , char **out){
   char *lpszW;
-  char *lpszW_pointer=NULL; //used for freeing string
+  //char *lpszW_pointer=NULL; //used for freeing string
   char *s_pointer=NULL; //used for original string fixed by autofix
   char *s_pointer_temp=NULL; //temporary used for autofix string
   char *precedingchar_pointer=NULL; //used for precedingchar character

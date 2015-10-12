@@ -77,7 +77,7 @@ void MyPushButton::draw(Bitmap *ds)
 int MyPushButton::pressedon()
 {
     int wasstat;
-    while (mbutrelease(LEFT) == 0) {
+    while ((mbutrelease(LEFT)) == 0) {
         timerloop = 0;
         wasstat = state;
         next_iteration();

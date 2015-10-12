@@ -42,7 +42,7 @@ inline void calc_x_n(unsigned long bla) __attribute__((always_inline));
 const unsigned int Magic = 0xBABE0000;
 const unsigned int Version = 1;
 const unsigned int SaveMagic = Magic + Version;
-const float PI = 3.14159265f;
+//const float PI = 3.14159265f;
 
 int screen_width = 320;
 int screen_height = 200;

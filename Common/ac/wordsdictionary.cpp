@@ -79,7 +79,9 @@ int WordsDictionary::find_index (const char*wrem) {
     return -1;
 }
 
-char *passwencstring = "Avis Durgan";
+// make this const to resolve Xcode warnings - Sriranga Veeraraghavan 10/12/2015
+
+const char *passwencstring = "Avis Durgan";
 
 void decrypt_text(char*toenc) {
   int adx = 0;

@@ -32,7 +32,7 @@ namespace ags_parallax {
 
 const unsigned int Magic = 0xCAFE0000;
 const unsigned int Version = 1;
-const unsigned int SaveMagic = Magic + Version;
+//const unsigned int SaveMagic = Magic + Version;
 
 int screen_width = 320;
 int screen_height = 200;

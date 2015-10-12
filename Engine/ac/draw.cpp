@@ -789,7 +789,7 @@ void write_screen() {
         return;
 
     static int wasShakingScreen = 0;
-    bool clearScreenBorders = false;
+    // bool clearScreenBorders = false;
     int at_yp = 0;
 
     if (play.shakesc_length > 0) {
@@ -2405,7 +2405,7 @@ void update_screen() {
     if ((in_new_room > 0) & (game.color_depth > 1))
         return;
     gfxDriver->DrawSprite(AGSE_POSTSCREENDRAW, 0, NULL);
-    Bitmap *ds = GetVirtualScreen();
+    // Bitmap *ds = GetVirtualScreen();
 
     // update animating mouse cursor
     if (game.mcurs[cur_cursor].view>=0) {

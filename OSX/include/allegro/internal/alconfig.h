@@ -316,6 +316,7 @@
 /* emulate missing library functions */
 #ifdef ALLEGRO_NO_STRICMP
    AL_FUNC(int, _alemu_stricmp, (AL_CONST char *s1, AL_CONST char *s2));
+   #undef  stricmp
    #define stricmp _alemu_stricmp
 #endif
 

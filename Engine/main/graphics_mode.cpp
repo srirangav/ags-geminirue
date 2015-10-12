@@ -433,7 +433,7 @@ int find_supported_resolution_width(const Size &ideal_size, int color_depth, int
             const int nearest_diff = abs(nearest_width - ideal_width_scaled);
             if (mode_diff <= max_width_diff &&
                 (mode_diff < nearest_diff ||
-                 mode_diff == nearest_diff && mode.Width > nearest_diff))
+                 (mode_diff == nearest_diff && mode.Width > nearest_diff)))
             {
                 nearest_width = mode.Width;
             }

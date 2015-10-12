@@ -322,7 +322,7 @@ int cunpackbitl32(unsigned int *line, int size, Stream *in)
 
 //=============================================================================
 
-char *lztempfnm = "~aclzw.tmp";
+const char *lztempfnm = "~aclzw.tmp";
 Bitmap *recalced = NULL;
 
 // returns bytes per pixel for bitmap's color depth

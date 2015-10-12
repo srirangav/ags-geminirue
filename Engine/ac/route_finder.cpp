@@ -55,7 +55,7 @@ void init_pathfinder()
 
 Bitmap *wallscreen;
 //#define DEBUG_PATHFINDER
-char *movelibcopyright = "PathFinder library v3.1 (c) 1998, 1999, 2001, 2002 Chris Jones.";
+const char *movelibcopyright = "PathFinder library v3.1 (c) 1998, 1999, 2001, 2002 Chris Jones.";
 int line_failed = 0;
 int lastcx, lastcy;
 

@@ -43,7 +43,8 @@ MyLabel::MyLabel(int xx, int yy, int wii, char *tee)
 
 void MyLabel::draw(Bitmap *ds)
 {
-    int curofs = 0, lastspac = 0, cyp = y;
+    // int curofs = 0, lastspac = 0, cyp = y;
+    int cyp = y;
     char *teptr = &text[0];
     color_t text_color = ds->GetCompatibleColor(0);
 

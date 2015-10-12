@@ -302,7 +302,7 @@ void SpriteCache::removeOldest()
       // memory)
       // There must be a bug somewhere causing this, but for now
       // let's just reset the cache
-      write_log("!!!! RUNTIME CACHE ERROR: CACHE INCONSISTENT: RESETTING");
+      write_log((char *)"!!!! RUNTIME CACHE ERROR: CACHE INCONSISTENT: RESETTING");
       char msgg[150];
       sprintf(msgg, "!!!! At size %d (of %d), start %d end %d  fwdlink=%d",
               cachesize, maxCacheSize, oldstart, listend, liststart);
@@ -377,7 +377,7 @@ int SpriteCache::loadSprite(int index)
     removeOldest();
     hh++;
     if (hh > 1000) {
-      write_log("!!!! RUNTIME CACHE ERROR: STUCK IN FREE_UP_MEM; RESETTING CACHE");
+      write_log((char *)"!!!! RUNTIME CACHE ERROR: STUCK IN FREE_UP_MEM; RESETTING CACHE");
       removeAll();
     }
 

@@ -329,7 +329,8 @@ void process_event(EventHappened*evp) {
         }
         else if (theTransition == FADE_DISSOLVE) {
             int pattern[16]={0,4,14,9,5,11,2,8,10,3,12,7,15,6,13,1};
-            int aa,bb,cc,thcol=0;
+            // int aa,bb,cc,thcol=0;
+            int aa,bb,cc;
             color interpal[256];
 
             IDriverDependantBitmap *ddb = prepare_screen_for_transition_in();

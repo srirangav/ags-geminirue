@@ -971,7 +971,7 @@ enum SavedGameVersion
     kSvgVersion_LowestSupported = kSvgVersion_321
 };
 
-char*sgsig="Adventure Game Studio saved game";
+const char *sgsig="Adventure Game Studio saved game";
 int sgsiglen=32;
 
 void serialize_bitmap(Common::Bitmap *thispic, Stream *out) {
@@ -2254,8 +2254,8 @@ int restore_game_data (Stream *in, const char *nametouse, SavedGameVersion svg_v
     // test if the playing music was properly loaded
     if (current_music_type > 0)
     {
-        if (crossFading > 0 && !channels[crossFading] ||
-            crossFading <= 0 && !channels[SCHAN_MUSIC])
+        if ((crossFading > 0 && !channels[crossFading]) ||
+            (crossFading <= 0 && !channels[SCHAN_MUSIC]))
         {
             current_music_type = 0;
         }
@@ -2291,8 +2291,8 @@ int restore_game_data (Stream *in, const char *nametouse, SavedGameVersion svg_v
     int gstimer=play.gscript_timer;
     int oldx1 = play.mboundx1, oldx2 = play.mboundx2;
     int oldy1 = play.mboundy1, oldy2 = play.mboundy2;
-    int musicWasRepeating = play.current_music_repeating;
-    int newms = play.cur_music_number;
+    //int musicWasRepeating = play.current_music_repeating;
+    //int newms = play.cur_music_number;
 
     // disable the queue momentarily
     int queuedMusicSize = play.music_queue_size;
@@ -2461,7 +2461,7 @@ Stream *open_savedgame(const char *savedgame, int &error_code, SavedGameVersion 
         return NULL;
     }
 
-    int oldeip = our_eip;
+    //int oldeip = our_eip;
     our_eip = 2050;
 
     // read description

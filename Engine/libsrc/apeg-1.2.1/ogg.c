@@ -37,7 +37,7 @@ static INLINE int buffer_data(APEG_LAYER *layer, ALOGG_INFO *info)
 	if(!pack_feof(layer->pf))
 	{
 		int i = 98304;
-		unsigned char *buf = ogg_sync_buffer(&info->osync, i);
+		unsigned char *buf = (unsigned char*)ogg_sync_buffer(&info->osync, i);
 
 		i = pack_fread(buf, i, layer->pf);
 		if(i < 0)

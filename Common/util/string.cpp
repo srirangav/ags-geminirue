@@ -681,8 +681,8 @@ void String::TrimLeft(char c)
 
     const char *trim_ptr = _meta->CStr;
     while (*trim_ptr &&
-        (c && *trim_ptr == c ||
-        !c && (*trim_ptr == ' ' || *trim_ptr == '\t' || *trim_ptr == '\r' || *trim_ptr == '\n')))
+        ((c && *trim_ptr == c) ||
+        (!c && (*trim_ptr == ' ' || *trim_ptr == '\t' || *trim_ptr == '\r' || *trim_ptr == '\n'))))
     {
         trim_ptr++;
     }
@@ -704,8 +704,8 @@ void String::TrimRight(char c)
 
     const char *trim_ptr = _meta->CStr + _meta->Length - 1;
     while (trim_ptr >= _meta->CStr &&
-        (c && *trim_ptr == c ||
-        !c && (*trim_ptr == ' ' || *trim_ptr == '\t' || *trim_ptr == '\r' || *trim_ptr == '\n')))
+        ((c && *trim_ptr == c) ||
+        (!c && (*trim_ptr == ' ' || *trim_ptr == '\t' || *trim_ptr == '\r' || *trim_ptr == '\n'))))
     {
         trim_ptr--;
     }

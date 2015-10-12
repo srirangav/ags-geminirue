@@ -275,14 +275,14 @@ int AGS_EngineOnEvent(int event, int data)                    //*** optional ***
 //------------------------------------------------------------------------------
 /*
 int AGS_EngineDebugHook(const char *scriptName,
-                        int lineNum, int reserved)            //*** optional ***
+                        int lineNum, int reserved)            // *** optional ***
 {
 	// Can be used to debug scripts, see documentation
 }
 */
 //------------------------------------------------------------------------------
 /*
-void AGS_EngineInitGfx(const char *driverID, void *data)      //*** optional ***
+void AGS_EngineInitGfx(const char *driverID, void *data)      // *** optional ***
 {
 	// This allows you to make changes to how the graphics driver starts up.
 	// See documentation

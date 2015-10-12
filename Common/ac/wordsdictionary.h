@@ -33,7 +33,9 @@ struct WordsDictionary {
     int   find_index (const char *);
 };
 
-extern char *passwencstring;
+// make this const to resolve Xcode warnings - Sriranga Veeraraghavan 10/12/2015
+
+extern const char *passwencstring;
 
 extern void decrypt_text(char*toenc);
 extern void read_string_decrypt(Common::Stream *in, char *sss);
