@@ -63,7 +63,7 @@ int evblocknum;
 
 int eventClaimed = EVENT_NONE;
 
-char*tsnames[4]={NULL, REP_EXEC_NAME, "on_key_press","on_mouse_click"};
+const char* tsnames[4]={NULL, REP_EXEC_NAME, "on_key_press","on_mouse_click"};
 
 
 int run_claimable_event(char *tsname, bool includeRoom, int numParams, RuntimeScriptValue *params, bool *eventWasClaimed) {
@@ -157,13 +157,13 @@ void process_event(EventHappened*evp) {
                 curscript->run_another(nameToExec, RuntimeScriptValue().SetInt32(evp->data2), rval_null /*0*/);
             }
             else
-                resl=gameinst->RunTextScriptIParam(tsnames[evp->data1],RuntimeScriptValue().SetInt32(evp->data2));
+                resl=gameinst->RunTextScriptIParam((char *)tsnames[evp->data1],RuntimeScriptValue().SetInt32(evp->data2));
         }
         else {
             if (inside_script)
-                curscript->run_another (tsnames[evp->data1], rval_null, rval_null /*0, 0*/);
+                curscript->run_another ((char *)tsnames[evp->data1], rval_null, rval_null /*0, 0*/);
             else
-                resl=gameinst->RunTextScript(tsnames[evp->data1]);
+                resl=gameinst->RunTextScript((char *)tsnames[evp->data1]);
         }
         //    Display("relt: %d err:%d",resl,scErrorNo);
     }

@@ -247,7 +247,7 @@ int create_global_script() {
         if (moduleInstFork[kk] == NULL)
             return -3;
 
-        moduleRepExecAddr[kk] = moduleInst[kk]->GetSymbolAddress(REP_EXEC_NAME);
+        moduleRepExecAddr[kk] = moduleInst[kk]->GetSymbolAddress((char *)REP_EXEC_NAME);
     }
     gameinst = ccInstance::CreateFromScript(gamescript);
     if (gameinst == NULL)
@@ -659,7 +659,7 @@ int run_interaction_commandlist (NewInteractionCommandList *nicl, int *timesrun,
 // inside the rep_exec_always function
 void can_run_delayed_command() {
   if (no_blocking_functions)
-    quit("!This command cannot be used within non-blocking events such as " REP_EXEC_ALWAYS_NAME);
+    quit("!This command cannot be used within non-blocking events");
 }
 
 void run_unhandled_event (int evnt) {

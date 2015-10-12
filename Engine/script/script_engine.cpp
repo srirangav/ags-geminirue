@@ -30,7 +30,7 @@
 
 using AGS::Common::Stream;
 
-char *scripteditruntimecopr = "Script Editor v1.2 run-time component. (c) 1998 Chris Jones";
+const char *scripteditruntimecopr = "Script Editor v1.2 run-time component. (c) 1998 Chris Jones";
 
 #define SCRIPT_CONFIG_VERSION 1
 extern void quit(const char *);
@@ -70,7 +70,7 @@ void save_graphical_scripts(Stream *out, roomstruct * rss)
     quit("ScriptEdit: run-time version can't save");
 }
 
-char *scripttempn = "~acsc%d.tmp";
+const char *scripttempn = "~acsc%d.tmp";
 
 void load_graphical_scripts(Stream *in, roomstruct * rst)
 {

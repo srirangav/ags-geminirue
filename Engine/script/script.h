@@ -24,8 +24,13 @@
 #include "script/nonblockingscriptfunction.h"
 #include "ac/dynobj/scriptsystem.h"
 
-#define REP_EXEC_ALWAYS_NAME "repeatedly_execute_always"
-#define REP_EXEC_NAME "repeatedly_execute"
+// covert from defines to const char* to statisfy Xcode - Sriranga Veeraraghavan 10/12/2015
+
+// #define REP_EXEC_ALWAYS_NAME "repeatedly_execute_always"
+// #define REP_EXEC_NAME "repeatedly_execute"
+
+const char* REP_EXEC_ALWAYS_NAME="repeatedly_execute_always";
+const char* REP_EXEC_NAME="repeatedly_execute";
 
 int     run_dialog_request (int parmtr);
 void    run_function_on_non_blocking_thread(NonBlockingScriptFunction* funcToRun);

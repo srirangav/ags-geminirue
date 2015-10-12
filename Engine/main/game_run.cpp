@@ -128,7 +128,7 @@ void game_loop_check_problems_at_start()
         done_es_error = 1;
     }
     if (no_blocking_functions)
-        quit("!A blocking function was called from within a non-blocking event such as " REP_EXEC_ALWAYS_NAME);
+        quit("!A blocking function was called from within a non-blocking event");
 
     // if we're not fading in, don't count the fadeouts
     if ((play.no_hicolor_fadein) && (game.options[OPT_FADETYPE] == FADE_NORMAL))
