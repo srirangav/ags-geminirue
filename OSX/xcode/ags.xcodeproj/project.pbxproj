@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262FEA9A1BCB9552007429E2 /* logfile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 262FEA981BCB9552007429E2 /* logfile.cpp */; settings = {ASSET_TAGS = (); }; };
+		262FEA9D1BCB95ED007429E2 /* speech.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 262FEA9B1BCB95ED007429E2 /* speech.cpp */; settings = {ASSET_TAGS = (); }; };
+		262FEAA01BCB963A007429E2 /* gfx_util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 262FEA9E1BCB963A007429E2 /* gfx_util.cpp */; settings = {ASSET_TAGS = (); }; };
 		28FD15000DC6FC520079059D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGL.framework */; };
 		6007696216E9F56E00DCE88E /* test_version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6007696116E9F56E00DCE88E /* test_version.cpp */; };
 		6007696416E9F57A00DCE88E /* test_sprintf.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6007696316E9F57A00DCE88E /* test_sprintf.cpp */; };
@@ -209,7 +212,6 @@
 		60CA3DAB160713FF00CFB3BD /* consoleoutputtarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60CA3BAD160713FE00CFB3BD /* consoleoutputtarget.cpp */; };
 		60CA3DAC160713FF00CFB3BD /* debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60CA3BAF160713FE00CFB3BD /* debug.cpp */; };
 		60CA3DAD160713FF00CFB3BD /* filebasedagsdebugger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60CA3BB3160713FE00CFB3BD /* filebasedagsdebugger.cpp */; };
-		60CA3DAE160713FF00CFB3BD /* rawfileoutputtarget.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60CA3BB5160713FE00CFB3BD /* rawfileoutputtarget.cpp */; };
 		60CA3DAF160713FF00CFB3BD /* mousew32.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60CA3BB8160713FE00CFB3BD /* mousew32.cpp */; };
 		60CA3DB1160713FF00CFB3BD /* fonts_engine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60CA3BBC160713FE00CFB3BD /* fonts_engine.cpp */; };
 		60CA3DB2160713FF00CFB3BD /* ali3dogl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60CA3BBF160713FE00CFB3BD /* ali3dogl.cpp */; };
@@ -320,7 +322,7 @@
 		DBCDB72F180EDBAA00FF80B1 /* libvorbisfile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCDB72C180EDBAA00FF80B1 /* libvorbisfile.a */; };
 		DBCDB731180EDBF500FF80B1 /* libvorbis.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCDB730180EDBF500FF80B1 /* libvorbis.a */; };
 		DBCDB733180EDC1D00FF80B1 /* FreeType.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCDB732180EDC1D00FF80B1 /* FreeType.framework */; };
-		DBCDB735180EDC3600FF80B1 /* FreeType.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DBCDB732180EDC1D00FF80B1 /* FreeType.framework */; };
+		DBCDB735180EDC3600FF80B1 /* FreeType.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = DBCDB732180EDC1D00FF80B1 /* FreeType.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		DBCDB737180EDCD000FF80B1 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCDB736180EDCD000FF80B1 /* Carbon.framework */; };
 		DBCDB73A180EE47C00FF80B1 /* libaldmb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCDB738180EE47C00FF80B1 /* libaldmb.a */; };
 		DBCDB73B180EE47C00FF80B1 /* libdumb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCDB739180EE47C00FF80B1 /* libdumb.a */; };
@@ -344,6 +346,12 @@
 
 /* Begin PBXFileReference section */
 		1D6058910D05DD3D006BFB54 /* ags.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ags.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		262FEA981BCB9552007429E2 /* logfile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = logfile.cpp; sourceTree = "<group>"; };
+		262FEA991BCB9552007429E2 /* logfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = logfile.h; sourceTree = "<group>"; };
+		262FEA9B1BCB95ED007429E2 /* speech.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = speech.cpp; sourceTree = "<group>"; };
+		262FEA9C1BCB95ED007429E2 /* speech.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = speech.h; sourceTree = "<group>"; };
+		262FEA9E1BCB963A007429E2 /* gfx_util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = gfx_util.cpp; sourceTree = "<group>"; };
+		262FEA9F1BCB963A007429E2 /* gfx_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gfx_util.h; sourceTree = "<group>"; };
 		28FD14FF0DC6FC520079059D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		32CA4F630368D1EE00C91783 /* ags_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ags_Prefix.pch; sourceTree = "<group>"; };
 		6007696116E9F56E00DCE88E /* test_version.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_version.cpp; sourceTree = "<group>"; };
@@ -809,8 +817,6 @@
 		60CA3BB2160713FE00CFB3BD /* dummyagsdebugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dummyagsdebugger.h; sourceTree = "<group>"; };
 		60CA3BB3160713FE00CFB3BD /* filebasedagsdebugger.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = filebasedagsdebugger.cpp; sourceTree = "<group>"; };
 		60CA3BB4160713FE00CFB3BD /* filebasedagsdebugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filebasedagsdebugger.h; sourceTree = "<group>"; };
-		60CA3BB5160713FE00CFB3BD /* rawfileoutputtarget.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rawfileoutputtarget.cpp; sourceTree = "<group>"; };
-		60CA3BB6160713FE00CFB3BD /* rawfileoutputtarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rawfileoutputtarget.h; sourceTree = "<group>"; };
 		60CA3BB8160713FE00CFB3BD /* mousew32.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mousew32.cpp; sourceTree = "<group>"; };
 		60CA3BB9160713FE00CFB3BD /* mousew32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mousew32.h; sourceTree = "<group>"; };
 		60CA3BBC160713FE00CFB3BD /* fonts_engine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fonts_engine.cpp; sourceTree = "<group>"; };
@@ -1708,6 +1714,8 @@
 				60CA3B8A160713FE00CFB3BD /* screenoverlay.h */,
 				60CA3B8B160713FE00CFB3BD /* slider.cpp */,
 				60CA3B8C160713FE00CFB3BD /* slider.h */,
+				262FEA9B1BCB95ED007429E2 /* speech.cpp */,
+				262FEA9C1BCB95ED007429E2 /* speech.h */,
 				60CA3B8D160713FE00CFB3BD /* sprite.cpp */,
 				60CA3B8E160713FE00CFB3BD /* sprite.h */,
 				60CA3B8F160713FE00CFB3BD /* spritecache_engine.cpp */,
@@ -1813,8 +1821,8 @@
 				60CA3BB2160713FE00CFB3BD /* dummyagsdebugger.h */,
 				60CA3BB3160713FE00CFB3BD /* filebasedagsdebugger.cpp */,
 				60CA3BB4160713FE00CFB3BD /* filebasedagsdebugger.h */,
-				60CA3BB5160713FE00CFB3BD /* rawfileoutputtarget.cpp */,
-				60CA3BB6160713FE00CFB3BD /* rawfileoutputtarget.h */,
+				262FEA981BCB9552007429E2 /* logfile.cpp */,
+				262FEA991BCB9552007429E2 /* logfile.h */,
 			);
 			path = debug;
 			sourceTree = "<group>";
@@ -1852,6 +1860,8 @@
 				60CA3BC6160713FE00CFB3BD /* gfxfilter.h */,
 				60CA3BC7160713FE00CFB3BD /* gfxfilterdefines.h */,
 				60CA3BC8160713FE00CFB3BD /* gfxfilterhelpers.h */,
+				262FEA9E1BCB963A007429E2 /* gfx_util.cpp */,
+				262FEA9F1BCB963A007429E2 /* gfx_util.h */,
 				60CA3BC9160713FE00CFB3BD /* gfxfilter_aad3d.cpp */,
 				60CA3BCA160713FE00CFB3BD /* gfxfilter_aad3d.h */,
 				60CA3BCB160713FE00CFB3BD /* gfxfilter_allegro.cpp */,
@@ -2255,6 +2265,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "ags" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2466,7 +2477,6 @@
 				60CA3DAB160713FF00CFB3BD /* consoleoutputtarget.cpp in Sources */,
 				60CA3DAC160713FF00CFB3BD /* debug.cpp in Sources */,
 				60CA3DAD160713FF00CFB3BD /* filebasedagsdebugger.cpp in Sources */,
-				60CA3DAE160713FF00CFB3BD /* rawfileoutputtarget.cpp in Sources */,
 				60CA3DAF160713FF00CFB3BD /* mousew32.cpp in Sources */,
 				60CA3DB1160713FF00CFB3BD /* fonts_engine.cpp in Sources */,
 				60CA3DB2160713FF00CFB3BD /* ali3dogl.cpp in Sources */,
@@ -2531,6 +2541,7 @@
 				60CA3E4F160713FF00CFB3BD /* udpate.cpp in Sources */,
 				60CA3E55160713FF00CFB3BD /* ambientsound.cpp in Sources */,
 				60CA3E56160713FF00CFB3BD /* audio.cpp in Sources */,
+				262FEA9A1BCB9552007429E2 /* logfile.cpp in Sources */,
 				60CA3E57160713FF00CFB3BD /* clip_mydumbmod.cpp in Sources */,
 				60CA3E58160713FF00CFB3BD /* clip_myjgmod.cpp in Sources */,
 				60CA3E59160713FF00CFB3BD /* clip_mymidi.cpp in Sources */,
@@ -2549,6 +2560,7 @@
 				60CA3E74160713FF00CFB3BD /* agsplugin.cpp in Sources */,
 				60CA3E75160713FF00CFB3BD /* global_plugin.cpp in Sources */,
 				60CA3E76160713FF00CFB3BD /* pluginobjectreader.cpp in Sources */,
+				262FEA9D1BCB95ED007429E2 /* speech.cpp in Sources */,
 				60CA3E7F160713FF00CFB3BD /* executingscript.cpp in Sources */,
 				60CA3E80160713FF00CFB3BD /* exports.cpp in Sources */,
 				60CA3E9F160713FF00CFB3BD /* script.cpp in Sources */,
@@ -2556,6 +2568,7 @@
 				60CA3EA1160713FF00CFB3BD /* script_runtime.cpp in Sources */,
 				DB994B1D180ECA6C00835511 /* acplmac.cpp in Sources */,
 				60CA3EA2160713FF00CFB3BD /* systemimports.cpp in Sources */,
+				262FEAA01BCB963A007429E2 /* gfx_util.cpp in Sources */,
 				60CA3EA4160713FF00CFB3BD /* test_all.cpp in Sources */,
 				60CA3EA5160713FF00CFB3BD /* test_file.cpp in Sources */,
 				60CA3EA6160713FF00CFB3BD /* test_string.cpp in Sources */,
@@ -2602,6 +2615,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2609,6 +2623,7 @@
 				GCC_PREFIX_HEADER = ags_Prefix.pch;
 				INFOPLIST_FILE = "ags-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.adventuregamestudio.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = ags;
 			};
 			name = Debug;
@@ -2617,11 +2632,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ags_Prefix.pch;
 				INFOPLIST_FILE = "ags-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.uk.adventuregamestudio.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = ags;
 			};
 			name = Release;
@@ -2629,7 +2646,8 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = i386;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "${SOURCE_ROOT}/../lib";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2652,18 +2670,20 @@
 				);
 				LIBRARY_SEARCH_PATHS = "${SOURCE_ROOT}/../lib";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-fpermissive",
 					"$(OTHER_CFLAGS)",
 				);
 				USER_HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/../include ${SOURCE_ROOT}/../../Plugins ${SOURCE_ROOT}/../../Common ${SOURCE_ROOT}/../../Common/libinclude ${SOURCE_ROOT}/../../Engine";
+				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = i386;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				FRAMEWORK_SEARCH_PATHS = "${SOURCE_ROOT}/../lib";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -2690,6 +2710,7 @@
 					"$(OTHER_CFLAGS)",
 				);
 				USER_HEADER_SEARCH_PATHS = "${SOURCE_ROOT}/../include ${SOURCE_ROOT}/../../Plugins ${SOURCE_ROOT}/../../Common ${SOURCE_ROOT}/../../Common/libinclude ${SOURCE_ROOT}/../../Engine";
+				VALID_ARCHS = i386;
 			};
 			name = Release;
 		};

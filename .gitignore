@@ -35,3 +35,6 @@ Engine/resource/version.aps
 *.d
 common.a
 ags
+
+OSX/xcode/ags.xcodeproj/project.xcworkspace/
+OSX/xcode/ags.xcodeproj/xcuserdata/
