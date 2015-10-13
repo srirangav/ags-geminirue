@@ -75,16 +75,16 @@ public:
     if (_library != NULL) return true;
 
     // Try current path
-    _library = dlopen(BuildPath(".", libraryName).GetCStr(), RTLD_LAZY);
+    _library = dlopen(BuildPath((char *)".", libraryName).GetCStr(), RTLD_LAZY);
 
     AGS::Common::Out::FPrint("dlopen returned: %s", dlerror());
 
     if (_library == NULL)
     {
       // Try the engine directory
+#if defined (ANDROID_VERSION)
       char buffer[200];
 
-#if defined (ANDROID_VERSION)
       sprintf(buffer, "%s%s", android_app_directory, "/lib");
       _library = dlopen(BuildPath(buffer, libraryName).GetCStr(), RTLD_LAZY);
 #else

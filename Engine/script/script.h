@@ -29,8 +29,8 @@
 // #define REP_EXEC_ALWAYS_NAME "repeatedly_execute_always"
 // #define REP_EXEC_NAME "repeatedly_execute"
 
-const char* REP_EXEC_ALWAYS_NAME="repeatedly_execute_always";
-const char* REP_EXEC_NAME="repeatedly_execute";
+extern const char* REP_EXEC_ALWAYS_NAME;
+extern const char* REP_EXEC_NAME;
 
 int     run_dialog_request (int parmtr);
 void    run_function_on_non_blocking_thread(NonBlockingScriptFunction* funcToRun);

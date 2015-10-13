@@ -58,7 +58,7 @@ void DynamicArray<T>::SetSizeTo(int newsize) {
     T *newdata = (T*)calloc(sizeof(T), datasize);
     if (dsWas > datasize)
       dsWas = datasize;
-    memcpy(newdata, data, sizeof(T) * dsWas);
+    memcpy((void*)newdata, (void*)data, sizeof(T) * dsWas);
     free(data);
     data = newdata;
   }
@@ -66,7 +66,7 @@ void DynamicArray<T>::SetSizeTo(int newsize) {
   // object into them
   // this is necessary so that the vtables are set up correctly
   for (int qq = dsWas; qq < datasize; qq++) {
-    memcpy(&data[qq], &defaultConstructed, sizeof(T));
+    memcpy((void*)&data[qq], (void*)&defaultConstructed, sizeof(T));
   }
 }
 

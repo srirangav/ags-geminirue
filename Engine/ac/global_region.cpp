@@ -156,7 +156,7 @@ void RunRegionInteraction (int regnum, int mood) {
     char *oldbasename = evblockbasename;
     int   oldblocknum = evblocknum;
 
-    evblockbasename = "region%d";
+    evblockbasename = (char *)"region%d";
     evblocknum = regnum;
 
     if (thisroom.regionScripts != NULL)

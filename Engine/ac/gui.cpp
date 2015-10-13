@@ -284,7 +284,7 @@ void process_interface_click(int ifce, int btn, int mbut) {
                         RuntimeScriptValue().SetDynamicObject(theObj, &ccDynamicGUIObject));
         }
         else
-            gameinst->RunTextScript2IParam("interface_click",
+            gameinst->RunTextScript2IParam((char *)"interface_click",
                 RuntimeScriptValue().SetInt32(ifce),
                 RuntimeScriptValue().SetInt32(btn));
     }

@@ -304,7 +304,7 @@ bool AssetManager::_IsDataFile(const String &data_file)
         return false;
     }
 
-    long abs_offset = 0; // library offset in this file
+    // long abs_offset = 0; // library offset in this file
     char clbuff[20];
     // check multifile lib signature at the beginning of file
     ci_s->Read(&clbuff[0], 5);
@@ -455,7 +455,7 @@ AssetError AssetManager::RegisterAssetLib(const String &data_file, const String 
             return kAssetErrNoLibSig;
         }
         ci_s->Seek(Common::kSeekEnd, -16);  // it's an appended-to-end-of-exe thing
-        int debug_pos2 = ci_s->GetPosition();
+        // int debug_pos2 = ci_s->GetPosition();
         // read multifile lib offset value
         abs_offset = ci_s->ReadInt32();
         ci_s->Seek(Common::kSeekBegin, abs_offset + 5);

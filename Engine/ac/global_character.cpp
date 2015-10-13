@@ -393,7 +393,7 @@ void RunCharacterInteraction (int cc, int mood) {
     else if (mood==MODE_CUSTOM1) passon = 6;
     else if (mood==MODE_CUSTOM2) passon = 7;
 
-    evblockbasename="character%d"; evblocknum=cc;
+    evblockbasename = (char *)"character%d"; evblocknum=cc;
     if (game.charScripts != NULL) 
     {
         if (passon>=0)

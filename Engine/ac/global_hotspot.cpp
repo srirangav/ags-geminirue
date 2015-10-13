@@ -111,7 +111,7 @@ void RunHotspotInteraction (int hotspothere, int mood) {
     char *oldbasename = evblockbasename;
     int   oldblocknum = evblocknum;
 
-    evblockbasename="hotspot%d";
+    evblockbasename = (char *)"hotspot%d";
     evblocknum=hotspothere;
 
     if (thisroom.hotspotScripts != NULL) 

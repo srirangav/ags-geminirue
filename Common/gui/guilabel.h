@@ -60,7 +60,7 @@ public:
     font = 0;
     textcol = 0;
     numSupportedEvents = 0;
-    text = "";
+    text = (char *)"";
     textBufferLen = 0;
   }
 

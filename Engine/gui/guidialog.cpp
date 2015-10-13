@@ -331,7 +331,7 @@ void enterstringwindow(char *prompttext, char *stouse)
   }
   Bitmap *ds = GetVirtualScreen();
   int handl = CSCIDrawWindow(ds, boxleft, boxtop, 200, 40);
-  int ctrlok = CSCICreateControl(CNT_PUSHBUTTON | CNF_DEFAULT, boxleft + 135, boxtop + 5, 60, 10, "OK");
+  int ctrlok = CSCICreateControl(CNT_PUSHBUTTON | CNF_DEFAULT, boxleft + 135, boxtop + 5, 60, 10, (char *)"OK");
   int ctrlcancel = -1;
   if (wantCancel)
     ctrlcancel = CSCICreateControl(CNT_PUSHBUTTON | CNF_CANCEL, boxleft + 135, boxtop + 20, 60, 10, get_global_message(MSG_CANCEL));
@@ -380,7 +380,8 @@ int roomSelectorWindow(int currentRoom, int numRooms, int*roomNumbers, char**roo
   int handl = CSCIDrawWindow(ds, boxleft, boxtop, 240, 160);
   int ctrllist = CSCICreateControl(CNT_LISTBOX, boxleft + 10, boxtop + 40, 220, 100, NULL);
   int ctrlcancel =
-    CSCICreateControl(CNT_PUSHBUTTON | CNF_CANCEL, boxleft + 80, boxtop + 145, 60, 10, "Cancel");
+    CSCICreateControl(CNT_PUSHBUTTON | CNF_CANCEL, boxleft + 80, boxtop + 145, 60, 10,
+                      (char *)"Cancel");
 
   CSCISendControlMessage(ctrllist, CLB_CLEAR, 0, 0);    // clear the list box
   for (int aa = 0; aa < numRooms; aa++)
@@ -393,8 +394,10 @@ int roomSelectorWindow(int currentRoom, int numRooms, int*roomNumbers, char**roo
     }
   }
 
-  int ctrlok = CSCICreateControl(CNT_PUSHBUTTON | CNF_DEFAULT, boxleft + 10, boxtop + 145, 60, 10, "OK");
-  int ctrltex1 = CSCICreateControl(CNT_LABEL, boxleft + 10, labeltop, 180, 0, "Choose which room to go to:");
+  int ctrlok = CSCICreateControl(CNT_PUSHBUTTON | CNF_DEFAULT, boxleft + 10, boxtop + 145, 60, 10,
+                                 (char *)"OK");
+  int ctrltex1 = CSCICreateControl(CNT_LABEL, boxleft + 10, labeltop, 180, 0,
+                                   (char *)"Choose which room to go to:");
   CSCIMessage mes;
 
   lpTemp = NULL;

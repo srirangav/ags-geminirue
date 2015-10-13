@@ -39,7 +39,7 @@ const char *ScriptString::GetType() {
 
 int ScriptString::Serialize(const char *address, char *buffer, int bufsize) {
     if (text == NULL)
-        text = "";
+        text = (char *)"";
     StartSerialize(buffer);
     SerializeInt(strlen(text));
     strcpy(&serbuffer[bytesSoFar], text);

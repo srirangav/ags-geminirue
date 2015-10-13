@@ -352,7 +352,7 @@ void _display_at(int xx,int yy,int wii,char*todis,int blocking,int asspch, int i
         if (play_speech(play.narrator_speech,igr)) {
             // if Voice Only, then blank out the text
             if (play.want_speech == 2)
-                todis = "  ";
+                todis = (char *)"  ";
         }
         needStopSpeech = 1;
     }

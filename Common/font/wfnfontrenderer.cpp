@@ -100,7 +100,7 @@ int WFNFontRenderer::GetTextWidth(const char *texx, int fontNumber)
   for (dd = 0; dd < strlen(texx); dd++) 
   {
     thisCharacter = texx[dd];
-    if ((thisCharacter >= 128) || (thisCharacter < 0)) thisCharacter = '?';
+    if ((thisCharacter >= (char)128) || (thisCharacter < 0)) thisCharacter = '?';
 
     char* fontaddr = psp_get_char(foon, thisCharacter);
 
@@ -125,7 +125,7 @@ int WFNFontRenderer::GetTextHeight(const char *texx, int fontNumber)
   for (dd = 0; dd < strlen(texx); dd++) 
   {
     thisCharacter = texx[dd];
-    if ((thisCharacter >= 128) || (thisCharacter < 0)) thisCharacter = '?';
+    if ((thisCharacter >= (char)128) || (thisCharacter < 0)) thisCharacter = '?';
 
     char* fontaddr = psp_get_char(foon, thisCharacter);
     short tabaddr_d;

@@ -2292,7 +2292,7 @@ void _displayspeech(char*texx, int aschar, int xx, int yy, int widd, int isThoug
 
         if (play_speech(aschar,igr)) {
             if (play.want_speech == 2)
-                texx = "  ";  // speech only, no text.
+                texx = (char *)"  ";  // speech only, no text.
         }
     }
     if (game.options[OPT_SPEECHTYPE] == 3)

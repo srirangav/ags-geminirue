@@ -394,7 +394,7 @@ void RunObjectInteraction (int aa, int mood) {
     else if (mood==MODE_USE) { passon=3;
     cdata=playerchar->activeinv;
     play.usedinv=cdata; }
-    evblockbasename="object%d"; evblocknum=aa;
+    evblockbasename = (char *)"object%d"; evblocknum=aa;
 
     if (thisroom.objectScripts != NULL) 
     {

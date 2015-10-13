@@ -2805,7 +2805,7 @@ void replace_tokens(char*srcmes,char*destm, int maxlen) {
 
 char *get_global_message (int msnum) {
     if (game.messages[msnum-500] == NULL)
-        return "";
+        return (char *)"";
     return get_translation(game.messages[msnum-500]);
 }
 

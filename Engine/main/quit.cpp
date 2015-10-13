@@ -156,7 +156,7 @@ void quit_check_for_error_state(char *&qmsg, char *alertis)
         if (qmsg[0] != '|')
             strcat(alertis,"\nError: ");
         else
-            qmsg = "";
+            qmsg = (char *)"";
     }
     else if (qmsg[0] == '%') {
         qmsg++;

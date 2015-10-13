@@ -88,10 +88,12 @@ char **characterScriptObjNames = NULL;
 char objectScriptObjNames[MAX_INIT_SPR][MAX_SCRIPT_NAME_LEN + 5];
 char **guiScriptObjNames = NULL;
 
+const char* REP_EXEC_ALWAYS_NAME="repeatedly_execute_always";
+const char* REP_EXEC_NAME="repeatedly_execute";
 
 int run_dialog_request (int parmtr) {
     play.stop_dialog_at_end = DIALOG_RUNNING;
-    gameinst->RunTextScriptIParam("dialog_request", RuntimeScriptValue().SetInt32(parmtr));
+    gameinst->RunTextScriptIParam((char *)"dialog_request", RuntimeScriptValue().SetInt32(parmtr));
 
     if (play.stop_dialog_at_end == DIALOG_STOP) {
         play.stop_dialog_at_end = DIALOG_NONE;
@@ -686,9 +688,9 @@ void run_unhandled_event (int evnt) {
         can_run_delayed_command();
 
         if (inside_script)
-            curscript->run_another ("#unhandled_event", RuntimeScriptValue().SetInt32(evtype), RuntimeScriptValue().SetInt32(evnt));
+            curscript->run_another ((char *)"#unhandled_event", RuntimeScriptValue().SetInt32(evtype), RuntimeScriptValue().SetInt32(evnt));
         else
-            gameinst->RunTextScript2IParam("unhandled_event",RuntimeScriptValue().SetInt32(evtype),RuntimeScriptValue().SetInt32(evnt));
+            gameinst->RunTextScript2IParam((char *)"unhandled_event",RuntimeScriptValue().SetInt32(evtype),RuntimeScriptValue().SetInt32(evnt));
     }
 }
 

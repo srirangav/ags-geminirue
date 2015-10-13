@@ -3907,10 +3907,13 @@ int alfont_ugetx(ALFONT_FONT *f, char **s) {
 	wcstombs(lpszWA, (const wchar_t *)lpszWS, nLen);
 	aLen = strlen(lpszWA);
 	#endif
- 
+
+  // added to satisfy Xcode - Sriranga Veeraraghavan 10/12/2015;
+  char **s_ptr;
+    
 	for (lIndex = 0; lIndex < sLen - aLen; lIndex++)
 	{
-		(*(*s)++);
+    s_ptr = (*(*s)++);
 	}
 
 	if (lpszWA) {
@@ -4223,10 +4226,13 @@ int alfont_ugetxc(ALFONT_FONT *f, const char **s) {
 	wcstombs(lpszWA, (const wchar_t *)lpszWS, nLen);
 	aLen = strlen(lpszWA);
 	#endif
- 
+
+  // added to satisfy Xcode - Sriranga Veeraraghavan 10/12/2015;
+  char **s_ptr;
+
 	for (lIndex = 0; lIndex < sLen - aLen; lIndex++)
 	{
-		(*(*s)++);
+		s_ptr = (*(*s)++);
 	}
 
 	if (lpszWA) {

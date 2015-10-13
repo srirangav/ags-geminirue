@@ -103,14 +103,14 @@ int run_claimable_event(char *tsname, bool includeRoom, int numParams, RuntimeSc
 // runs the global script on_event function
 void run_on_event (int evtype, RuntimeScriptValue &wparam) {
     if (inside_script) {
-        curscript->run_another("#on_event", RuntimeScriptValue().SetInt32(evtype), wparam);
+        curscript->run_another((char *)"#on_event", RuntimeScriptValue().SetInt32(evtype), wparam);
     }
     else
-        gameinst->RunTextScript2IParam("on_event", RuntimeScriptValue().SetInt32(evtype), wparam);
+        gameinst->RunTextScript2IParam((char *)"on_event", RuntimeScriptValue().SetInt32(evtype), wparam);
 }
 
 void run_room_event(int id) {
-    evblockbasename="room";
+    evblockbasename = (char *)"room";
 
     if (thisroom.roomScripts != NULL)
     {
@@ -123,7 +123,7 @@ void run_room_event(int id) {
 }
 
 void run_event_block_inv(int invNum, int event) {
-    evblockbasename="inventory%d";
+    evblockbasename = (char *)"inventory%d";
     if (game.invScripts != NULL)
     {
         run_interaction_script(game.invScripts[invNum], event);
@@ -183,7 +183,7 @@ void process_event(EventHappened*evp) {
             else
                 evpt=&croom->intrHotspot[evp->data2];
 
-            evblockbasename="hotspot%d";
+            evblockbasename= (char *)"hotspot%d";
             evblocknum=evp->data2;
             //platform->WriteDebugString("Running hotspot interaction for hotspot %d, event %d", evp->data2, evp->data3);
         }
@@ -194,7 +194,7 @@ void process_event(EventHappened*evp) {
             else
                 evpt=&croom->intrRoom;
 
-            evblockbasename="room";
+            evblockbasename= (char *)"room";
             if (evp->data3 == 5) {
                 in_enters_screen ++;
                 run_on_event (GE_ENTER_ROOM, RuntimeScriptValue().SetInt32(displayed_room));
